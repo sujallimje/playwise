@@ -116,7 +116,7 @@ PlayWise Engine Architecture
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/playwise-engine.git
+git clone https://github.com/sujallimje/playwise-engine.git
 cd playwise-engine
 
 # Build using Make
@@ -323,7 +323,7 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 
 ```bash
 # Fork and clone the repository
-git clone https://github.com/your-username/playwise-engine.git
+git clone https://github.com/sujallimje/playwise-engine.git
 cd playwise-engine
 
 # Create a feature branch
