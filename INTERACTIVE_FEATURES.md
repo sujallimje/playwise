@@ -7,7 +7,7 @@ The PlayWise Music Engine now supports fully interactive operation where users c
 ## How to Run
 
 ```bash
-cd d:/_cpp/technicia/playwise
+cd \\path\\
 ./build/playwise_engine
 ```
 

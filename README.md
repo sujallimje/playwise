@@ -1,79 +1,84 @@
-🎵 PlayWise Music Engine
-Smart Playlist Management System Built with Fundamental Data Structures & Algorithms
-Show Image
-Show Image
-Show Image
+# 🎵 PlayWise Music Engine
 
-📋 Table of Contents
+## Smart Playlist Management System Built with Fundamental Data Structures & Algorithms
 
-Overview
-Features
-Architecture
-Installation
-Usage
-Performance
-Testing
-Documentation
-Contributing
+[![C++](https://img.shields.io/badge/C++-17-blue.svg)](https://isocpp.org/)
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)]()
+[![License](https://img.shields.io/badge/license-MIT-green.svg)]()
 
+---
 
-🎯 Overview
+## 📋 Table of Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [Architecture](#architecture)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Performance](#performance)
+- [Testing](#testing)
+- [Documentation](#documentation)
+- [Contributing](#contributing)
+
+---
+
+## 🎯 Overview
+
 PlayWise is a high-performance music playlist management engine that demonstrates the practical application of fundamental data structures and algorithms. Built entirely in C++17, it provides real-time playlist manipulation, intelligent song organization, and memory-efficient operations.
-Key Highlights
 
-⚡ High Performance: O(1) insertions, O(log n) searches, O(n log n) sorting
-🧠 Memory Efficient: Optimized data structures with minimal overhead
-🔄 Real-time Operations: Live playlist manipulation and undo functionality
-📊 Analytics Dashboard: Real-time system statistics and insights
-🧪 Thoroughly Tested: Comprehensive test suite with performance benchmarks
+### Key Highlights
+- ⚡ **High Performance**: O(1) insertions, O(log n) searches, O(n log n) sorting
+- 🧠 **Memory Efficient**: Optimized data structures with minimal overhead
+- 🔄 **Real-time Operations**: Live playlist manipulation and undo functionality  
+- 📊 **Analytics Dashboard**: Real-time system statistics and insights
+- 🧪 **Thoroughly Tested**: Comprehensive test suite with performance benchmarks
 
+---
 
-✨ Features
-🎼 Playlist Management (Doubly Linked List)
+## ✨ Features
 
-Add songs to playlist with O(1) insertion at end
-Delete songs by index with efficient node removal
-Move songs between positions with pointer manipulation
-Reverse playlist with O(n) single-pass algorithm
-Bidirectional traversal for flexible navigation
+### 🎼 Playlist Management (Doubly Linked List)
+- **Add songs** to playlist with O(1) insertion at end
+- **Delete songs** by index with efficient node removal
+- **Move songs** between positions with pointer manipulation
+- **Reverse playlist** with O(n) single-pass algorithm
+- **Bidirectional traversal** for flexible navigation
 
-📚 Playback History (Stack)
+### 📚 Playback History (Stack)
+- **LIFO playback tracking** for natural undo behavior
+- **Undo last played** song and re-add to playlist
+- **Recent history access** for dashboard display
+- **Memory efficient** stack operations
 
-LIFO playback tracking for natural undo behavior
-Undo last played song and re-add to playlist
-Recent history access for dashboard display
-Memory efficient stack operations
+### ⭐ Rating System (Binary Search Tree)
+- **Fast rating-based searches** with O(log n) complexity
+- **Bucket system** for multiple songs per rating (1-5 stars)
+- **Ordered rating traversal** for recommendation systems
+- **Efficient insertion/deletion** with BST properties
 
-⭐ Rating System (Binary Search Tree)
+### 🔍 Instant Lookup (HashMap)
+- **O(1) song retrieval** by unique ID
+- **Title-based search** with duplicate handling
+- **Synchronized updates** across all data structures
+- **Constant-time performance** for search operations
 
-Fast rating-based searches with O(log n) complexity
-Bucket system for multiple songs per rating (1-5 stars)
-Ordered rating traversal for recommendation systems
-Efficient insertion/deletion with BST properties
+### 📈 Smart Sorting Engine
+- **Multiple algorithms**: Merge Sort (stable) and Quick Sort (fast)
+- **Flexible criteria**: Title, duration, recently added
+- **Performance comparison** between sorting methods
+- **In-place and stable** sorting options
 
-🔍 Instant Lookup (HashMap)
+### 📊 Live Dashboard
+- **Top longest songs** analysis
+- **Recently played** history display  
+- **Song count by rating** statistics
+- **Real-time system metrics** export
 
-O(1) song retrieval by unique ID
-Title-based search with duplicate handling
-Synchronized updates across all data structures
-Constant-time performance for search operations
+---
 
-📈 Smart Sorting Engine
+## 🏗️ Architecture
 
-Multiple algorithms: Merge Sort (stable) and Quick Sort (fast)
-Flexible criteria: Title, duration, recently added
-Performance comparison between sorting methods
-In-place and stable sorting options
-
-📊 Live Dashboard
-
-Top longest songs analysis
-Recently played history display
-Song count by rating statistics
-Real-time system metrics export
-
-
-🏗️ Architecture
+```
 PlayWise Engine Architecture
 ├── Core Components
 │   ├── PlaylistEngine (Doubly Linked List)
@@ -89,25 +94,29 @@ PlayWise Engine Architecture
     ├── Performance Metrics
     ├── System Snapshots
     └── Live Dashboard
-Data Flow
+```
 
-User Input → Request validation and routing
-Core Operations → Data structure manipulation
-Synchronization → Cross-component updates
-Analytics → Real-time metrics calculation
-Response → Results delivery to user
+### Data Flow
+1. **User Input** → Request validation and routing
+2. **Core Operations** → Data structure manipulation
+3. **Synchronization** → Cross-component updates
+4. **Analytics** → Real-time metrics calculation
+5. **Response** → Results delivery to user
 
+---
 
-🚀 Installation
-Prerequisites
+## 🚀 Installation
 
-C++17 compatible compiler (GCC 7+, Clang 5+, MSVC 2017+)
-Make build system (optional)
-Git for cloning the repository
+### Prerequisites
+- **C++17** compatible compiler (GCC 7+, Clang 5+, MSVC 2017+)
+- **Make** build system (optional)
+- **Git** for cloning the repository
 
-Quick Start
-bash# Clone the repository
-git clone https://github.com/sujallimje/playwise-engine.git
+### Quick Start
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/playwise-engine.git
 cd playwise-engine
 
 # Build using Make
@@ -118,8 +127,12 @@ g++ -std=c++17 -Wall -Wextra -O2 playwise_engine.cpp -o build/playwise_engine
 
 # Run the demo
 ./build/playwise_engine
-Build Options
-bash# Debug build with symbols
+```
+
+### Build Options
+
+```bash
+# Debug build with symbols
 make debug
 
 # Performance profiling build
@@ -133,10 +146,16 @@ make benchmark && make run-benchmark
 
 # Memory leak check (requires valgrind)
 make memcheck
+```
 
-💻 Usage
-Basic Example
-cpp#include "playwise_engine.h"
+---
+
+## 💻 Usage
+
+### Basic Example
+
+```cpp
+#include "playwise_engine.h"
 
 int main() {
     PlayWiseEngine engine;
@@ -161,8 +180,12 @@ int main() {
     
     return 0;
 }
-Advanced Operations
-cpp// Access individual components
+```
+
+### Advanced Operations
+
+```cpp
+// Access individual components
 auto& playlist = engine.getPlaylist();
 auto& history = engine.getHistory();
 auto& ratingTree = engine.getRatingTree();
@@ -180,11 +203,27 @@ auto fourStarSongs = ratingTree.search_by_rating(4);
 // Fast lookups
 Song* song = lookup.lookup_by_id("001");
 auto sameTitleSongs = lookup.lookup_by_title("Bohemian Rhapsody");
+```
 
-⚡ Performance
-Time Complexity Summary
-OperationBest CaseAverage CaseWorst CaseAdd SongO(1)O(1)O(1)Delete SongO(1)O(n)O(n)Move SongO(1)O(n)O(n)Play/UndoO(1)O(1)O(1)Search by IDO(1)O(1)O(n)Search by RatingO(log n)O(log n)O(n)Sort PlaylistO(n log n)O(n log n)O(n²)
-Benchmark Results (50,000 songs)
+---
+
+## ⚡ Performance
+
+### Time Complexity Summary
+
+| Operation | Best Case | Average Case | Worst Case |
+|-----------|-----------|--------------|------------|
+| Add Song | O(1) | O(1) | O(1) |
+| Delete Song | O(1) | O(n) | O(n) |
+| Move Song | O(1) | O(n) | O(n) |
+| Play/Undo | O(1) | O(1) | O(1) |
+| Search by ID | O(1) | O(1) | O(n) |
+| Search by Rating | O(log n) | O(log n) | O(n) |
+| Sort Playlist | O(n log n) | O(n log n) | O(n²) |
+
+### Benchmark Results (50,000 songs)
+
+```
 Operation          Time       Memory    Notes
 ---------          ----       ------    -----
 Insert 50K songs   42.3 ms    ~12 MB    Linear insertion at end
@@ -192,18 +231,25 @@ Reverse playlist   15.2 ms    0 MB      In-place pointer manipulation
 Sort by title      145.8 ms   ~8 MB     Quick sort implementation
 ID lookup (1K)     0.6 ms     0 MB      HashMap O(1) performance
 Rating search      12.3 ms    ~1 MB     BST traversal + bucket access
-Memory Usage
+```
 
-Base overhead: ~214 bytes per song
-String storage: ~50-100 bytes per song (title, artist, ID)
-Total per song: ~300-400 bytes
-100K songs: ~30-40 MB total memory usage
+### Memory Usage
 
+- **Base overhead**: ~214 bytes per song
+- **String storage**: ~50-100 bytes per song (title, artist, ID)
+- **Total per song**: ~300-400 bytes
+- **100K songs**: ~30-40 MB total memory usage
 
-🧪 Testing
+---
+
+## 🧪 Testing
+
 The project includes a comprehensive test suite covering functionality, performance, and edge cases.
-Running Tests
-bash# Build and run all tests
+
+### Running Tests
+
+```bash
+# Build and run all tests
 make test && make run-test
 
 # Run specific test categories
@@ -216,16 +262,20 @@ make memcheck
 # Performance profiling
 make gen-profile
 cat profile_analysis.txt
-Test Coverage
+```
 
-✅ Unit Tests: All data structure operations
-✅ Integration Tests: Cross-component functionality
-✅ Performance Tests: Scalability up to 50K songs
-✅ Edge Cases: Boundary conditions and error handling
-✅ Memory Tests: Leak detection and usage analysis
-✅ Benchmark Suite: Comparative performance analysis
+### Test Coverage
 
-Sample Test Output
+- ✅ **Unit Tests**: All data structure operations
+- ✅ **Integration Tests**: Cross-component functionality  
+- ✅ **Performance Tests**: Scalability up to 50K songs
+- ✅ **Edge Cases**: Boundary conditions and error handling
+- ✅ **Memory Tests**: Leak detection and usage analysis
+- ✅ **Benchmark Suite**: Comparative performance analysis
+
+### Sample Test Output
+
+```
 === Testing Playlist Operations (Doubly Linked List) ===
 ✓ Add songs to playlist
 ✓ Get first song
@@ -241,32 +291,38 @@ Sample Test Output
 Passed: 156/156
 Success Rate: 100%
 🎉 All tests passed!
+```
 
-📚 Documentation
-Technical Documentation
+---
 
-Technical Design Document - Comprehensive architecture and implementation details
-API Reference - Complete function documentation
-Performance Analysis - Detailed complexity analysis and benchmarks
+## 📚 Documentation
 
-Code Documentation
+### Technical Documentation
+- **[Technical Design Document](docs/technical_design.md)** - Comprehensive architecture and implementation details
+- **[API Reference](docs/api_reference.md)** - Complete function documentation
+- **[Performance Analysis](docs/performance_analysis.md)** - Detailed complexity analysis and benchmarks
 
-Inline comments explaining complex algorithms
-Time/Space complexity annotations for all methods
-Design rationale for data structure choices
-Trade-off analysis for implementation decisions
+### Code Documentation
+- **Inline comments** explaining complex algorithms
+- **Time/Space complexity** annotations for all methods
+- **Design rationale** for data structure choices
+- **Trade-off analysis** for implementation decisions
 
-Build Documentation
+### Build Documentation
+- **[Build Guide](docs/build_guide.md)** - Compilation instructions for different platforms
+- **[Testing Guide](docs/testing_guide.md)** - How to run and interpret tests
+- **[Deployment Guide](docs/deployment_guide.md)** - Production deployment considerations
 
-Build Guide - Compilation instructions for different platforms
-Testing Guide - How to run and interpret tests
-Deployment Guide - Production deployment considerations
+---
 
+## 🤝 Contributing
 
-🤝 Contributing
-We welcome contributions! Please see our Contributing Guidelines for details.
-Development Setup
-bash# Fork and clone the repository
+We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
+
+### Development Setup
+
+```bash
+# Fork and clone the repository
 git clone https://github.com/your-username/playwise-engine.git
 cd playwise-engine
 
@@ -285,31 +341,36 @@ make analyze
 # Commit and push
 git commit -m "Add awesome feature"
 git push origin feature/awesome-feature
-Code Style
+```
 
-C++17 standard compliance
-RAII for resource management
-const-correctness throughout
-Clear naming conventions
-Comprehensive documentation for public APIs
+### Code Style
+- **C++17** standard compliance
+- **RAII** for resource management
+- **const-correctness** throughout
+- **Clear naming** conventions
+- **Comprehensive documentation** for public APIs
 
+---
 
-📄 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+## 📄 License
 
-🎯 Project Goals Achieved
-✅ Data Structures Implementation
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Doubly Linked List: Efficient playlist manipulation
-Stack: LIFO playback history with undo functionality
-Binary Search Tree: Rating-based song categorization
-HashMap: O(1) song lookup by ID and title
-Sorting Algorithms: Merge and Quick sort with performance comparison
+---
 
-✅ Engineering Best Practices
+## 🎯 Project Goals Achieved
 
-Time/Space Complexity: All methods properly analyzed and documented
-Memory Management: RAII and proper cleanup throughout
-Error Handling: Comprehensive bounds checking and validation
-Testing: 100% test coverage with performance benchmarks
-Documentation: Complete technical design document
+### ✅ Data Structures Implementation
+- **Doubly Linked List**: Efficient playlist manipulation
+- **Stack**: LIFO playback history with undo functionality
+- **Binary Search Tree**: Rating-based song categorization
+- **HashMap**: O(1) song lookup by ID and title
+- **Sorting Algorithms**: Merge and Quick sort with performance comparison
+
+### ✅ Engineering Best Practices
+- **Time/Space Complexity**: All methods properly analyzed and documented
+- **Memory Management**: RAII and proper cleanup throughout
+- **Error Handling**: Comprehensive bounds checking and validation
+- **Testing**: 100% test coverage with performance benchmarks
+- **Documentation**: Complete technical design document
+
